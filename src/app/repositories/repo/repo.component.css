@@ -1,0 +1,8 @@
+.panel-heading[aria-expanded="true"] .glyphicon{
+    transition: 0.3s;
+    transform: rotate(90deg);
+}
+.panel-heading[aria-expanded="false"] .glyphicon{
+    transition: 0.3s;
+    transform: rotate(0deg);
+}

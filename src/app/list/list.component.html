@@ -1,0 +1,11 @@
+<div class="v-spacer col-md-12"></div>
+<div *ngIf = "listOfFollowers && listOfFollowers.length>0">
+  
+  <div class="list-group col-md-12">
+    <!-- <h3>Followers</h3> -->
+    <app-list-item *ngFor="let follower of listOfFollowers" class="list-group-item" [follower] = "follower"></app-list-item>
+  </div>
+</div>
+<div *ngIf="listOfFollowers && listOfFollowers.length==0">
+  <h3>The User has no Followers!</h3>
+</div>

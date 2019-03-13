@@ -1,0 +1,8 @@
+<div class="row  col-md-12" [class.hide]="hideFlag">
+  <div class="v-spacer"></div>
+  <ul class="nav nav-tabs">
+    <li routerLinkActive="active"><a [routerLink]="[this.router.url.substr(0,this.router.url.lastIndexOf('/')),'profile']">Profile</a></li>
+    <li routerLinkActive="active"><a [routerLink]="[this.router.url.substr(0,this.router.url.lastIndexOf('/')),'repositories']">Repositories</a></li>
+    <li routerLinkActive="active"><a [routerLink]="[this.router.url.substr(0,this.router.url.lastIndexOf('/')),'followers']">Followers</a></li>
+  </ul>
+</div>

@@ -1,0 +1,57 @@
+<div class="col-md-12" *ngIf="userProfile && userProfile!=null">
+    
+  <div style="text-align: center">
+    <div class="h3">{{ userProfile.login }}</div>
+    <div class="blockquote"><a href="{{userProfile.html_url}}" target="_blank" >{{userProfile.html_url}}</a></div>
+  </div>
+  <div class="v-spacer col-md-12"></div>
+  <div class="col-lg-5 col-md-4" style="text-align: center">
+    <img [src]="userProfile.avatar_url" [alt]="userProfile.login" class="avatar_image">
+    <div class="v-spacer col-md-12"></div>
+    <div>Followers: <span class="badge">{{userProfile.followers}}</span></div>
+    <div>Following: <span class="badge">{{userProfile.following}}</span></div>
+    <div>Public Repositories: <span class="badge">{{userProfile.public_repos}}</span></div>
+    <div>Public Gists: <span class="badge">{{userProfile.public_gists}}</span></div>
+    <div class="v-spacer col-md-12"></div>
+  </div>
+  <div class="col-lg-7 col-md-8">
+
+    <table class="table borderless" style="border: none">
+      <tr>
+        <td>Name: </td>
+        <td>{{userProfile.name?userProfile.name:'Not Available'}}</td>
+      </tr>
+      <tr>
+        <td>ID: </td>
+        <td>{{userProfile.id?userProfile.id:'Not Available'}}</td>
+      </tr>
+      <tr>
+        <td>Company: </td>
+        <td>{{userProfile.company?userProfile.company:'Not Available'}}</td>
+      </tr>
+      <tr>
+        <td>Email: </td>
+        <td>{{userProfile.email?userProfile.email:'Not Available'}}</td>
+      </tr>
+      <tr>
+        <td>Blog URL: </td>
+        <td>{{userProfile.blog?userProfile.blog:'Not Available'}}</td>
+      </tr>
+      <tr>
+        <td>Location: </td>
+        <td>{{userProfile.location?userProfile.location:'Not Available'}}</td>
+      </tr>
+      <tr>
+        <td>Hireable: </td>
+        <td>{{userProfile.bio?hireable.hireable:'Not Available'}}</td>
+      </tr>
+      <tr>
+        <td>Bio: </td>
+        <td>{{userProfile.bio?userProfile.bio:'Not Available'}}</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="col-md-12 v-spacer">
+  <div>
+    <app-repo *ngFor="let repository of repositories" [repoId]="repository.id">
+      <ng-container class="heading">
+        {{ repository.name }}
+        <span class="hidden-xs" style="float:right" *ngIf="repository.language">Language: {{repository.language}}</span>
+      </ng-container>
+      <ng-container class="body-text">
+        Name: {{repository.full_name}}
+
+        <div class="row">
+          <br />
+          <div class="hidden-md hidden-lg col-sm-12" *ngIf="repository.language">
+            <span>Language: {{repository.language}}</span>
+          </div>
+          <br class="hidden-md hidden-lg col-sm-12" *ngIf="repository.language" />
+
+          <div class="col-md-6 col-lg-3">
+            Watch: <span class="badge">{{repository.watchers_count}}</span>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            Stars: <span class="badge">{{repository.stargazers_count}}</span>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            Forks: <span class="badge">{{repository.forks_count}}</span>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            Pull Request: <span class="badge">{{repository.pulls_url.length}}</span>
+          </div>
+        </div>
+        <br />
+        <a href="{{repository.html_url}}" target="_blank"><i>Open Repository Page</i></a>
+      </ng-container>
+    </app-repo>
+  </div>
+</div>

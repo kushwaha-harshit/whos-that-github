@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.v-spacer{
+    padding-top: 40px;
+}
+
+button:active {
+    box-shadow: 0 2px 0 #006599;
+    transform: translateY(3px);
+  }
+  
