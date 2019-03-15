@@ -1,9 +1,9 @@
 <div class="col-md-12">
   <div class="panel panel-default">
-    <div class="panel-heading" data-toggle="collapse" [attr.data-target] = "'#'+repoId">
+    <div class="panel-heading collapsed" data-toggle="collapse" [attr.data-target] = "'#'+repoId">
       <span class="glyphicon glyphicon-chevron-right" style="color:#666"></span><ng-content select=".heading"></ng-content>
     </div>
-    <div class="panel-collapse collapse" [attr.id]="repoId" style="overflow: auto">
+    <div class="panel-collapse collapse" [attr.id]="repoId" style="overflow: auto" >
       <div class="panel-body">
         <ng-content select=".body-text"></ng-content>
       </div>

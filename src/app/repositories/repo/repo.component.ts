@@ -12,7 +12,6 @@ export class RepoComponent implements OnInit {
 
 
   ngOnInit() {
-   
   }
 
 }

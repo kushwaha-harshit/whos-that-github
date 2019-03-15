@@ -9,8 +9,12 @@ import { Router, RouteConfigLoadStart, RouteConfigLoadEnd, NavigationStart, Navi
 export class AppComponent {
   title = 'github';
 
-  constructor(private router: Router){
+  constructor(protected router: Router){
     
+  }
+
+  isVisible(): boolean{
+    if (this.router.url == '/') return false; return true
   }
 
   loading: boolean=true;

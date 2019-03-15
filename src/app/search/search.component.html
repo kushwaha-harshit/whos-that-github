@@ -3,9 +3,9 @@
     <h2 style="text-align: center">Who's that, GitHub?</h2>
   </div>
   <div class="col-md-8" style="margin-top:15px">
-    <input type="text" class="form-control" #user [(ngModel)]="username" placeholder = "Github username" (keydown.enter)="getUserProfile(user)">
+    <input type="text" class="form-control" #user [(ngModel)]="username" placeholder = "Github username" (keydown.enter)="getUserProfile()">
   </div>
   <div class="col-md-4" style="margin-top:15px">
-    <button class="btn btn-primary form-control" (click)="getUserProfile(user)">Search</button>
+    <button class="btn btn-primary form-control" (click)="getUserProfile()">Search</button>
   </div>
 </div>
