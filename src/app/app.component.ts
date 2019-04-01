@@ -13,6 +13,10 @@ export class AppComponent {
     
   }
 
+  changeFlag(isLoaded: boolean){
+    alert()
+  }
+
   isVisible(): boolean{
     if (this.router.url == '/') return false; return true
   }

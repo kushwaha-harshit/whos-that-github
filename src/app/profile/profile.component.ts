@@ -13,20 +13,23 @@ export class ProfileComponent implements OnInit {
 
   username: string;
   userProfile: any;
+  isLoaded: boolean = false;
 
   constructor(private route: ActivatedRoute, private service: FollowersService, private router: Router) { }
 
   ngOnInit() {
+    this.isLoaded = false
     this.route.paramMap.subscribe(response => {
       this.username = response.get('username')
       this.service.fetchUserProfile(this.username)
       .subscribe((response) => {
         this.userProfile = response
+        this.isLoaded=true
       },
       error => {
         if (error instanceof NotFoundError){
-          alert('"'+this.username+'" is not a valid username!\nPlease enter a valid username')
           this.router.navigate(['/'])
+          alert('"'+this.username+'" is not a valid username!\nPlease enter a valid username')
         }
       })
     })

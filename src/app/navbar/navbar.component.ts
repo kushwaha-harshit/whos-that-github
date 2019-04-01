@@ -11,17 +11,7 @@ export class NavbarComponent {
   constructor(private route: ActivatedRoute, public router: Router) {
 
   }
+ 
 
-  username: any
-
-  
-
-  routeToFollowers() {
-    this.router.navigate([this.router.url.substr(0, this.router.url.lastIndexOf('/')), 'followers'])
-  }
-
-  routeToProfile() {
-    this.router.navigate([this.router.url.substr(0, this.router.url.lastIndexOf('/')), 'profile'])
-  }
 
 }

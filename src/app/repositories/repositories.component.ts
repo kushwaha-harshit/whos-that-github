@@ -10,19 +10,24 @@ import { NotFoundError } from '../Errors/not-found.error';
 })
 export class RepositoriesComponent implements OnInit {
 
+  
+  repositories: any;
+  isLoaded: boolean = false;
   constructor(private service: FollowersService, private route: ActivatedRoute) { }
 
-  repositories: any;
 
   ngOnInit() {
+    this.isLoaded = false
     let username = this.route.snapshot.paramMap.get('username')
     this.service.fetchRepositories(username)
     .subscribe(
       repos => {
         this.repositories = repos
+        this.isLoaded=true
     },
       error => {
         if (error instanceof NotFoundError){
+          this.isLoaded = true
           alert('Page Not Found!')
         }
     })

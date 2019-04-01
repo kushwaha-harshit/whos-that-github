@@ -1,5 +1,6 @@
+<loading-spinner *ngIf = "!isLoaded"></loading-spinner>
 <div class="col-md-12" *ngIf="userProfile && userProfile!=null">
-    
+  
   <div style="text-align: center">
     <div class="h3">{{ userProfile.login }}</div>
     <div class="blockquote"><a href="{{userProfile.html_url}}" target="_blank" >{{userProfile.html_url}}</a></div>
@@ -43,7 +44,7 @@
       </tr>
       <tr>
         <td>Hireable: </td>
-        <td>{{userProfile.bio?hireable.hireable:'Not Available'}}</td>
+        <td>{{userProfile.hireable?userProfile.hireable:'Not Available'}}</td>
       </tr>
       <tr>
         <td>Bio: </td>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ThrowStmt } from '@angular/compiler';
 import { FollowersService } from '../services/followers.service';
@@ -10,12 +10,12 @@ import { FollowersService } from '../services/followers.service';
 })
 export class SearchComponent implements OnInit {
 
-
   constructor(private router: Router, private route: ActivatedRoute, private service: FollowersService) { }
 
   username: string
 
   ngOnInit() {
+    console.log('emitted')
     this.service.usernameEmitter.subscribe(username => {
       this.username = username
     })
